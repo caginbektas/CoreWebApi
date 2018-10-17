@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CoreWebApi</name>
+    </assembly>
+    <members>
+        <member name="T:CoreWebApi.Controllers.ServiceController">
+            <summary>
+            API Version 1.0
+            </summary>
+        </member>
+        <member name="M:CoreWebApi.Controllers.ServiceController.UpdateProductById(System.Int32,System.String)">
+            <summary>
+            Version 1.0
+            Using Id parameter to update 
+            description field of the product
+            </summary>
+            <param name="id">Required  - Id of the Product which is going to be updated</param>
+            <param name="description">Optional - Description, New description of the product</param>
+            <returns>
+            OK (200) - Product description updated
+            BadRequest (400) - No Product with specified ID / Validation Error / Nothing to be updated cases with error message.
+            </returns>
+        </member>
+        <member name="M:CoreWebApi.Controllers.ServiceController.GetProductById(System.Int32)">
+            <summary>
+            Version 1.0
+            Gets the product with the specified ID
+            </summary>
+            <param name="id">Required  Id of the Product which is going to be responsed</param>
+            <returns>
+            OK (200) - Product has been successfully responded
+            NoContent (204) - No Product with specified ID
+            </returns>
+        </member>
+        <member name="M:CoreWebApi.Controllers.ServiceController.GetAllProducts">
+            <summary>
+            Version 1.0
+            Gets all available products 
+            </summary>
+            <returns>
+            OK (200) - Products has been listed
+            NoContent (204) - No Product(s) to be shown
+            </returns>
+        </member>
+    </members>
+</doc>
