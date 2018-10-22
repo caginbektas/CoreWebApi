@@ -3,6 +3,7 @@ using Data.Entity;
 using Microsoft.AspNetCore.Mvc;
 using Business;
 using Business.Interface;
+using Data.Model;
 
 namespace CoreWebApi.Controllers
 {
@@ -33,9 +34,9 @@ namespace CoreWebApi.Controllers
         /// </returns>
         [HttpPost]
         [Route("UpdateProductById")]
-        public IActionResult UpdateProductById([FromQuery]int id, string description)
+        public IActionResult UpdateProductById([FromBody]ProductModel model)
         {
-            var result = ProductService.UpdateProductById(id, description);
+            var result = ProductService.UpdateProductById(model.Id, model.Description);
             if (result.Exception == null)
                 return Ok(result);
             else

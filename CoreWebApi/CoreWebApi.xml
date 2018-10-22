@@ -9,7 +9,7 @@
             API Version 1.0
             </summary>
         </member>
-        <member name="M:CoreWebApi.Controllers.ServiceController.UpdateProductById(System.Int32,System.String)">
+        <member name="M:CoreWebApi.Controllers.ServiceController.UpdateProductById(Data.Model.ProductModel)">
             <summary>
             Version 1.0
             Using Id parameter to update 
